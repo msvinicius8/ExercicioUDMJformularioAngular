@@ -1,0 +1,53 @@
+<div class="container my-3 p-2">
+  <h1>Esta é uma tela de cadastro</h1><hr>
+  <form>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-2">
+          <label>Nome</label>
+          <input type="id" class="form-control" id="idInput" placeholder="o ID é automatico" disabled>
+        </div>
+        <div class="col-10">
+          <label>Nome</label>
+          <input type="nome" class="form-control" id="nomeInput" placeholder="Digite um nome" [disabled]="desabilitarCamposCadastro">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <label>endereço</label>
+          <input type="endereco" class="form-control" id="enderecoInput" placeholder="Digite o endereço" [disabled]="desabilitarCamposCadastro">
+        </div>
+        <div class="col-6">
+          <label>cidade</label>
+          <input type="cidade" class="form-control" id="cidadeInput" placeholder="Digite a cidade" [disabled]="desabilitarCamposCadastro">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <label>Bairro</label>
+          <input type="endereco" class="form-control" id="enderecoInput" placeholder="Digite o bairro" [disabled]="desabilitarCamposCadastro">
+        </div>
+        <div class="col-3">
+          <label>Cep</label>
+          <input type="cidade" class="form-control" id="cidadeInput" placeholder="00000-000" [disabled]="desabilitarCamposCadastro">
+        </div>
+        <div class="col-3">
+          <label>Telefone</label>
+          <input type="cidade" class="form-control" id="cidadeInput" placeholder="(xx)xxx-xxxx" [disabled]="desabilitarCamposCadastro">
+        </div>
+      </div>
+    </div>
+    <br>
+  </form>
+  <div class="d-flex flex-row alert alert-primary">
+    <div class="p-2"><button class="btn btn-primary btn-block" (click)="novo()" [hidden]="esconderBotaoNovo">Novo</button></div>
+    <div class="p-2"><button class="btn btn-primary btn-block" (click)="alterar()" [hidden]="esconderBotaoAlterar">Alterar</button></div>
+    <div class="p-2"><button class="btn btn-primary btn-block" (click)="excluir()" [hidden]="esconderBotaoExcluir">Excluir</button></div>
+    <div class="p-2"><button class="btn btn-primary btn-block" (click)="procurarOpcao()" [hidden]="esconderBotaoProcurar">Procurar</button></div> 
+    <div class="p-2"><button class="btn btn-primary btn-block" (click)="gravar()" [hidden]="esconderBotaoGravar">Gravar</button></div>
+    <div class="p-2"><button class="btn btn-primary btn-block" (click)="gravar()" [hidden]="esconderBotaoConfirmarExclusao">Você tem certeza de excluir este registro?</button></div>
+    <div class="p-2"><button class="btn btn-primary btn-block" (click)="cancelar()" [hidden]="esconderBotaoCancelar">Cancelar</button></div>
+    <div class="p-2 col-5"><input type="procurar" class="form-control" id="procurarInput" [hidden]="esconderCampoProcura" placeholder="Digite um nome a ser procurado"></div>
+    <div class="p-2"><button class="btn btn-primary btn-block" (click)="procurarAcao()" [hidden]="esconderBotaoProcurarAcao">Procurar</button></div>
+  </div>
+</div>
